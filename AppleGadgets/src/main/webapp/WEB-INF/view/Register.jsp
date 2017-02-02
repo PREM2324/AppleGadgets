@@ -125,13 +125,13 @@
   <div class="wrapper">
   <form class="register">
     <p class="title" style="color:#ff3399;font-size:30px;font-family:Gill Sans MT;margin-top:30px">GET REGISTERED</p>
-    <input type="text" placeholder="Name" autofocus/>
+    <input type="text" placeholder="Name" autofocus style="color:green"/>
     <i class="fa fa-user"></i>
-    <input type="password" placeholder="Password" />
+    <input type="password" placeholder="Password" style="color:green" />
     <i class="fa fa-key"></i>
-    <input type="password" placeholder="MobileNo" />
+    <input type="password" placeholder="MobileNo" style="color:green"/>
     <i class="fa fa-phone"></i>
-    <input type="password" placeholder="EmailId" />
+    <input type="password" placeholder="EmailId" style="color:green"/>
     <i class="fa fa-envelope"></i>
     
     

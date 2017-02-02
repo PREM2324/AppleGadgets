@@ -10,7 +10,7 @@
 <body>
 						         <!-- Navigation Bar Command -->
 																	
-<nav class="navbar navbar-dark navbar-fixed-top" style="background-color:#3366ff">
+<nav class="navbar navbar-dark navbar-fixed-top" style="background-color:#003366">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="Index" style="color:yellow;font-size:25px;font-family:Segoe Script">AppleGadgets</a>
