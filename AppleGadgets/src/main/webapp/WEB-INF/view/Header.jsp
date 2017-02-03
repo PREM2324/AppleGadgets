@@ -18,6 +18,7 @@
     
     <ul class="nav navbar-nav navbar-left">
     <li> <a href="AboutUs" style="color:white"> ABOUT US</a></li>
+    <li> <a href="ProductForm" style="color:white"> PRODUCT FORM</a></li>
     </ul>  
       
     
