@@ -7,14 +7,14 @@
 <html>
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title>Spring MVC Form Handling</title>
+  <title>Product Form</title>
  </head>
  <body>
   <h2>Add Product Data</h2>
   <form:form method="POST" action="./saveProduct" commandName="prdfrm">
       <table>
 <!--        <tr> -->
-<%--            <td><form:label path="id">Product ID:</form:label></td> --%>
+<%--            <td><form:label path="productid">Product ID:</form:label></td> --%>
 <%--            <td><form:input path="id" value="${product.productid}" readonly="true"/></td> --%>
 <!--        </tr> -->
        <tr>
@@ -26,8 +26,14 @@
            <td><form:input path="description"/></td>
        </tr>
        <tr>
-           <td><form:label path="price">Product Price:</form:label></td>
+           <td><form:label path="price">Product price:</form:label></td>
            <td><form:input path="price" /></td>
+       </tr>
+        <tr>
+           <td><label for="category">Category</label></td>
+           <td><c:forEach var="c" items="${categories}">
+			<form:radiobutton path="category.id" value="${c.id}" />${c.categoryDetails}
+			</c:forEach></td>
        </tr>
        
        
@@ -40,8 +46,7 @@
    <a type="button" class="btn-success"  href="listProducts">View all products</a>
 
   <center>
-<div style="color: teal; font-size: 30px">Being Java Guys | User
-   Details</div>
+<div style="color: teal; font-size: 30px">User Details</div>
 
   <c:if test="${!empty productList}">
    <table border="1" bgcolor="black" width="600px">
@@ -62,7 +67,7 @@
       style="background-color: white; color: black; text-align: center;"
       height="30px">
       
-      <td><c:out value="${pd.id}" />
+      <td><c:out value="${pd.productid}" />
       </td>
       <td><c:out value="${pd.name}" />
       </td>
@@ -70,20 +75,14 @@
       </td>
       <td><c:out value="${pd.price}" />
       </td>
-      <td><a href="edit?id=${pd.id}">Edit</a></td>
-      <td><a href="deleteProduct?id=${pd.id}">Delete</a></td>
+      <td><a href="edit?id=${pd.productid}">Edit</a></td>
+      <td><a href="deleteProduct?id=${pd.productid}">Delete</a></td>
      </tr>
     </c:forEach>
    </table>
   </c:if>
   <a href="ProductForm">add new product</a>
 </center>
-  
-  
-  
-  
-  
 </form:form>
- 
  </body>
 </html>

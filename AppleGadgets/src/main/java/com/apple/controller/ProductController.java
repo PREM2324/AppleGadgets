@@ -3,6 +3,7 @@ package com.apple.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.apple.model.Product;
+import com.apple.service.CategoryService;
 import com.apple.service.ProductService;
 
 @Controller
@@ -17,15 +19,17 @@ public class ProductController
 {
 	@Autowired
 	private ProductService productService;
-	
+	@Autowired
+	private CategoryService categoryService;
 	public ProductController()
 	{
 		System.out.println("Creating instance for ProductController");
 	}
 	
 	@RequestMapping("/ProductForm")
-	public ModelAndView gotoProduct(@ModelAttribute("prdfrm")Product prdfrm) 
+	public ModelAndView gotoProduct(Model model,@ModelAttribute("prdfrm")Product prdfrm)
 	{
+		model.addAttribute("categories", categoryService.getCategories());
 		  return new ModelAndView("ProductForm");
 	}
 	
@@ -36,7 +40,7 @@ public class ProductController
 		
 		productService.insertRow(prdfrm);
 		List<Product> ls=productService.getList();
-		return new ModelAndView("ProductForm","productList",ls);
+		return new ModelAndView("listProducts","productList",ls);
 	}
 	
 	@RequestMapping("/listProducts")
