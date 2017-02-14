@@ -22,6 +22,7 @@
      <td>Product Name</td>
    <td>Product Description</td>
    <td>Product Price</td>
+   <td>Product Supplier</td>
    
      <td>Edit</td>
      <td>Delete</td>
@@ -39,6 +40,11 @@
       </td>
       <td><c:out value="${pd.price}" />
       </td>
+      <td><c:out value="${pd.supplier}" />
+      </td>
+      
+
+      
       <td><a href="editProduct?id=${pd.id}">Edit</a></td>
       <td><a href="deleteProduct?id=${pd.id}">Delete</a></td>
      </tr>

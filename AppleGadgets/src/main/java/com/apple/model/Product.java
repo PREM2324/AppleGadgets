@@ -1,5 +1,6 @@
 package com.apple.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -8,11 +9,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 @Entity
 
-public class Product {
+public class Product implements Serializable 
+
+{
+
+	private static final long serialVersionUID = -723583058586873479L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -26,7 +30,18 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name="cid")
 	private Category category;
+	@ManyToOne
+	@JoinColumn(name="supplier")
+	private Supplier supplier;
 	
+	public Supplier getSupplier() {
+		return supplier;
+	}
+
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}
+
 	public Category getcategory(){
 		return category;
 	}

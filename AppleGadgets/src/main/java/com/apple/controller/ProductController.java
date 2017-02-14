@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.apple.model.Product;
 import com.apple.service.CategoryService;
 import com.apple.service.ProductService;
+import com.apple.service.SupplierService;
 
 @Controller
 public class ProductController 
@@ -21,6 +22,9 @@ public class ProductController
 	private ProductService productService;
 	@Autowired
 	private CategoryService categoryService;
+	@Autowired
+	private SupplierService supplierService;
+	
 	public ProductController()
 	{
 		System.out.println("Creating instance for ProductController");
@@ -30,6 +34,7 @@ public class ProductController
 	public ModelAndView gotoProduct(Model model,@ModelAttribute("prdfrm")Product prdfrm)
 	{
 		model.addAttribute("categories", categoryService.getCategories());
+		 model.addAttribute("suppliers",supplierService.getSuppliers());
 		  return new ModelAndView("ProductForm");
 	}
 	

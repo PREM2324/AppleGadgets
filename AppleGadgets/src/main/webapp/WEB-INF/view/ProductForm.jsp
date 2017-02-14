@@ -35,6 +35,14 @@
 			<form:radiobutton path="category.id" value="${c.id}" />${c.categoryDetails}
 			</c:forEach></td>
        </tr>
+       <tr>
+           <td><label for="supplier">Product Supplier</label></td>
+           <td><c:forEach var="s" items="${suppliers}">
+			<form:radiobutton path="supplier.id" value="${s.id}" />${s.name}
+			</c:forEach></td>
+       </tr>
+       
+       
        
        
           <tr>
