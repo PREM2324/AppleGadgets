@@ -18,6 +18,11 @@
     
     <ul class="nav navbar-nav navbar-left">
     <li> <a href="AboutUs" style="color:white"> ABOUT US</a></li>
+    
+    
+    <li><a href="admin/product/productform" style="color:white">PRODUCTS</a></li>
+    
+    <li><a href="all/product/getAllProducts" style="color:white">BROWSE ALL PRODUCTS</a></li>
     </ul>  
       
     

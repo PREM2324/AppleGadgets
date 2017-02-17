@@ -1,4 +1,4 @@
-package com.apple.model;
+/*package com.apple.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -69,4 +69,4 @@ public class Supplier implements Serializable
 		return name;
 	}
 
-}
+}*/

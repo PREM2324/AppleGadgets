@@ -1,4 +1,4 @@
-package com.apple.service;
+/*package com.apple.service;
 
 import java.util.List;
 
@@ -19,4 +19,4 @@ public class SupplierServiceImpl implements SupplierService
 		return supplierDao.getSuppliers();
 	}
 
-}
+}*/

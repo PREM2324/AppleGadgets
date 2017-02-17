@@ -9,13 +9,13 @@ import com.apple.dao.CategoryDao;
 import com.apple.model.Category;
 
 @Service
-public class CategoryServiceImpl implements CategoryService{
-	@Autowired
-private CategoryDao categoryDao;
+public class CategoryServiceImpl implements CategoryService {
+@Autowired
+	private CategoryDao categoryDao;
 
-	public List<Category> getCategories() {
+	public List<Category> getCategories(){
 		return categoryDao.getCategories();
 	}
-	
 
 }
+

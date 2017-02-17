@@ -5,5 +5,6 @@ import java.util.List;
 import com.apple.model.Category;
 
 public interface CategoryDao {
-List<Category> getCategories();
+
+	List<Category> getCategories();
 }

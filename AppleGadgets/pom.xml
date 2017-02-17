@@ -62,7 +62,7 @@
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
-    <version>5.2.5.Final</version>
+    <version>4.0.1.Final</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
@@ -96,7 +96,28 @@
     <groupId>javax.validation</groupId>
     <artifactId>validation-api</artifactId>
     <version>1.0.0.GA</version>
-</dependency>    
+</dependency> 
+
+<!-- For validation -->
+         <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.2.0.Final</version>
+        </dependency> 
+
+<!-- File Upload dependency -->
+<dependency>
+	<groupId>commons-fileupload</groupId>
+	<artifactId>commons-fileupload</artifactId>
+	<version>1.2.2</version>
+</dependency>
+
+<!-- File io -->
+<dependency>
+	<groupId>commons-io</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>2.4</version>
+</dependency>  
   
   </dependencies>
   <build>

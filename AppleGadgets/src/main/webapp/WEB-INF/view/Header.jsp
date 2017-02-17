@@ -5,6 +5,13 @@
 										
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		    <link rel="stylesheet" href="<c:url value='/resource/css/bootstrap.min.css'/>" />
+		    
+		                                  <!-- JQuery -->
+		    							
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -18,10 +25,15 @@
     
     <ul class="nav navbar-nav navbar-left">
     <li> <a href="AboutUs" style="color:white"> ABOUT US</a></li>
-    <li> <a href="ProductForm" style="color:white"> PRODUCT FORM</a></li>
-    </ul>  
+    <!-- <li> <a href="productform" style="color:white"> PRODUCT FORM</a></li> -->
+    
       
     
+    <li><a href="admin/product/productform" style="color:white">PRODUCTS</a></li>
+    
+    <li><a href="all/product/getAllProducts" style="color:white">BROWSE ALL PRODUCTS</a></li>
+    
+    </ul>  
         
     <ul class="nav navbar-nav navbar-right">
       <li><a href="Register" style="color:white"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li>

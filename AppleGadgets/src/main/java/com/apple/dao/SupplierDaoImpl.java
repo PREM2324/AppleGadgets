@@ -1,4 +1,4 @@
-package com.apple.dao;
+/*package com.apple.dao;
 
 import java.util.List;
 
@@ -23,4 +23,4 @@ public class SupplierDaoImpl implements SupplierDao {
 		return suppliers;
 	}
 
-}
+}*/
