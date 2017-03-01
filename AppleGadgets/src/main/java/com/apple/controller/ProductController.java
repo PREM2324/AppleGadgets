@@ -24,7 +24,7 @@ import com.apple.service.ProductService;
 @Controller
 public class ProductController {
 @Autowired
-private ProductService productService;
+private ProductService productService;                     
 @Autowired
 private CategoryService categoryService;	
 	

@@ -1,22 +1,28 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false" %>
+
+
+<!-- Header Command -->
 <%@ include file="Header.jsp"%>
-<%@ page isELIgnored="false"%>
+
 
 <html>
 <head>
 <title>Product list</title>
 </head>
 <body style="margin-top:90px;">
-
+<div style="font-family:Arial Rounded MT;font-size:30px;color:blue;text-align:center">PRODUCTS LIST</div>
 	<div class="container">
 
-		<table class="table table-striped">
+		<table class="table table-striped" style="margin-top:20px">
 			<thead>
-				<tr>
-					<th style="color:violet;font-family:Lucida Sans Unicode">IMAGE</th>
-					<th style="color:violet;font-family:Lucida Sans Unicode">PRODUCT NAME</th>
-					<th style="color:violet;font-family:Lucida Sans Unicode">DESCRIPTION</th>
-					<th style="color:violet;font-family:Lucida Sans Unicode">CATEGORY</th>
-					<th style="color:violet;font-family:Lucida Sans Unicode">VIEW/EDIT/DELETE</th>
+				<tr bgcolor="violet"> 
+					<th style="color:white;font-family:Lucida Sans Unicode">IMAGE</th>
+					<th style="color:white;font-family:Lucida Sans Unicode">PRODUCT NAME</th>
+					<th style="color:white;font-family:Lucida Sans Unicode">DESCRIPTION</th>
+					<th style="color:white;font-family:Lucida Sans Unicode">CATEGORY</th>
+					<th style="color:white;font-family:Lucida Sans Unicode">VIEW/DELETE/EDIT</th>
 				</tr>
 			</thead>
 			<c:forEach var="p" items="${productList}">

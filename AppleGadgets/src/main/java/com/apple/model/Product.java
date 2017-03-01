@@ -1,5 +1,7 @@
 package com.apple.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -34,8 +36,8 @@ private double price;
 @Min(value=1,message="Minimum quantity must be 1 ")
 private int quantity;
 
-/*@NotNull(message="Manufacturing date is mandatory")
-private Date mfg;*/
+@NotNull(message="Manufacturing date is mandatory")
+private Date mfg;
 
 @ManyToOne
 @JoinColumn(name="cid")
@@ -45,9 +47,9 @@ private Category category;
 	//Transient varibles cannot be persisted
 @Transient
 private MultipartFile image;
-public Category getCategory(){
+/*public Category getCategory(){
 	return category;
-}
+}*/
 
 		/*Generating getter and setter method*/
 
@@ -91,24 +93,24 @@ public void setQuantity(int quantity) {
 	this.quantity = quantity;
 }
 
-/*public Date getMfg() {
+public Date getMfg() {
 	return mfg;
 }
 
 public void setMfg(Date mfg) {
 	this.mfg = mfg;
-}*/
-
-public Category getCategory1() {
-	return category;
-}
-
-public void setCategory1(Category category) {
-	this.category = category;
 }
 
 public MultipartFile getImage() {
 	return image;
+}
+
+public Category getCategory() {
+	return category;
+}
+
+public void setCategory(Category category) {
+	this.category = category;
 }
 
 public void setImage(MultipartFile image) {
