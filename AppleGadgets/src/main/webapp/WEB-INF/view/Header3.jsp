@@ -16,21 +16,21 @@
 <nav class="navbar navbar-dark navbar-fixed-top" style="background-color:#003366">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="Index" style="color:yellow;font-size:25px;font-family:Segoe Script">AppleGadgets</a>
+      <a class="navbar-brand" href="<c:url value="/Index"></c:url>" style="color:yellow;font-size:25px;font-family:Segoe Script">AppleGadgets</a>
     </div>
     
     <ul class="nav navbar-nav navbar-left">
-    <li> <a href="AboutUs" style="color:white"> ABOUT US</a></li>
+    <li><a href="<c:url value="/AboutUs"></c:url>" style="color:white"> ABOUT US</a></li>
     
     
-    <li><a href="admin/product/productform" style="color:white">PRODUCTS</a></li>
+    <li><a href="<c:url value="/admin/product/productform"></c:url>" style="color:white">PRODUCTS</a></li>
     
-    <li><a href="all/product/getAllProducts" style="color:white">BROWSE ALL PRODUCTS</a></li>
+    <li><a href="<c:url value="/all/product/getAllProducts"></c:url>" style="color:white">BROWSE ALL PRODUCTS</a></li>
     </ul>  
       
     
         <ul class="nav navbar-nav navbar-right">
-         <li><a href="Login" style="color:white"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+         <li><a href="<c:url value="/login"></c:url>" style="color:white"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
         </ul>
     
   </div>

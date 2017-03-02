@@ -1,4 +1,7 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+                                    <!-- Header tab Command -->
+							
+		                          <%@ include file="Header2.jsp" %>	
+
 <html >
 <head>
   <title>LoginPage</title>
@@ -117,16 +120,21 @@
 
 <body>  
 
-                                    <!-- Header tab Command -->
-							
-		                          <%@ include file="Header2.jsp" %>	
+                                    
+
+<%-- ENTER USERNAME AND PASSWORD <br>
+${error }
+${logout }
+${registrationSuccess } --%>
+		                          
                                     
   <div class="wrapper">
-  <form class="login" action="./loginCk" method="post">
+  <form class="login" action="<c:url value="/j_spring_security_check"></c:url>" method="post">
+  
     <p class="title" style="color:#990099;margin-top:30px;font-family:Gill Sans MT;font-size:30px">GET LOGGEDIN</p>
-    <input type="text" id="uname" name="uname" placeholder="Username" autofocus style="color:green"/>
+    <input type="text" id="j_username" name="j_username" placeholder="Username" autofocus style="color:green"/>
     <i class="fa fa-user"></i>
-    <input type="password" id="passwd" name="passwd" placeholder="Password" style="color:green"/>
+    <input type="password" id="j_password" name="j_password" placeholder="Password" style="color:green"/>
     <i class="fa fa-key"></i>
    
     

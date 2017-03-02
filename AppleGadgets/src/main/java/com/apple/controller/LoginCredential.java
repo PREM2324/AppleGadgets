@@ -1,4 +1,4 @@
-package com.apple.controller;
+/*package com.apple.controller;
 
 public class LoginCredential
 {
@@ -29,4 +29,4 @@ public class LoginCredential
 	}
 	
 }
-	
+	*/

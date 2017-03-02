@@ -32,10 +32,10 @@ public String gotoHome1()
 	return "Index";
 }
 
-@RequestMapping("/Login")
-public String gotoHome2()
+@RequestMapping("/login")
+public String login()
 {
-	return "Login";
+	return "login";
 }
 
 @RequestMapping("/Register")
@@ -50,24 +50,4 @@ public String gotoHome4()
 	return "AboutUs";
 }
 
-@RequestMapping(value="loginCk",method=RequestMethod.POST)
-public void validateLogin(HttpServletRequest request,HttpServletRequest response,ServletRequest req,ServletResponse res)throws ServletException,IOException
-{
- String u=request.getParameter("uname");
- String p=request.getParameter("passwd");
-  LoginCredential obj=new LoginCredential();
-   obj.setUname(u); 
-   obj.setPasswd(p);
-  
-   if(obj.checklogin())
-   {
-    RequestDispatcher dispatch=request.getRequestDispatcher("Index");
-    dispatch.forward(req, res);
-   }
-   else
-   {
-    RequestDispatcher dispatch=request.getRequestDispatcher("AboutUs");
-    dispatch.forward(req, res);
-   }
-}
 }

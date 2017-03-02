@@ -1,6 +1,8 @@
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page isELIgnored="false" %>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+    <%@ taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
+    <%@ page isELIgnored="false" %>
 
 <html>
 <head>
@@ -15,26 +17,44 @@
 <nav class="navbar navbar-light navbar-fixed-top" style="background-color:#003366">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="Index" style="color:yellow;font-size:25px;font-family:Segoe Script">AppleGadgets</a>
+      <a class="navbar-brand" href="<c:url value="/Index"></c:url>" style="color:yellow;font-size:25px;font-family:Segoe Script">AppleGadgets</a>
     </div>
     
     <ul class="nav navbar-nav navbar-left">
-    <li> <a href="AboutUs" style="color:white"> ABOUT US</a></li>
+    <li><a href="<c:url value="/AboutUs"></c:url>" style="color:white"> ABOUT US</a></li>
     <!-- <li> <a href="productform" style="color:white"> PRODUCT FORM</a></li> -->
     
       
     
-    <li><a href="admin/product/productform" style="color:white">PRODUCTS</a></li>
+    <li><a href="<c:url value="/admin/product/productform"></c:url>" style="color:white">PRODUCTS</a></li>
     
-    <li><a href="all/product/getAllProducts" style="color:white">BROWSE ALL PRODUCTS</a></li>
+    <%-- <c:if test="${pageContext.request.userPrincipal.name !=null }">
+   <!-- http://localhost:8080/project1/admin/product/productform -->
+   
+   <security:authorize access="hasRole('ROLE_ADMIN')">
+   <li><a href="${url }">Add New Product</a></li>
+   </security:authorize> --%>
+   <li><a href="<c:url value="/all/product/getAllProducts"></c:url>" style="color:white">BROWSE ALL PRODUCTS</a></li>
+   
+   <%-- </c:if> --%>
     
     </ul>  
         
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="Register" style="color:white"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li>
-      <li><a href="Login" style="color:white"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
-      <li> <a href="<c:url value="/all/registrationForm"></c:url>" style="color:white">REGISTER</a></li>
-    </ul>
+    
+    <%-- <li><a href="">welcome ${pageContext.request.userPrincipal.name }</a></li>
+    			
+			<c:if test="${pageContext.request.userPrincipal.name ==null }"> --%>
+			
+			
+      <li><a href="<c:url value="/Register"></c:url>" style="color:white"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li>
+      
+      <li> <a href="<c:url value="/everyone/registrationForm"></c:url>" style="color:white">REGISTER</a></li>
+      
+      <li><a href="<c:url value="/login"></c:url>" style="color:white"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
+            
+            <%-- </c:if> --%>
+     </ul>
   </div>
 </nav>
 							<!-- Placed at the end of the document so that page load faster -->
