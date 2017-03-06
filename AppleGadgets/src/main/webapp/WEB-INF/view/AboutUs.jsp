@@ -1,6 +1,6 @@
                                     <!-- Header tab Command -->
 							
-		                          <%@ include file="Header2.jsp" %>
+		                          <%@ include file="Header.jsp" %>
 
 <html>
 <head>

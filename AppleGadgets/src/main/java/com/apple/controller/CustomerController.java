@@ -31,11 +31,11 @@ public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer
 	customerService.saveCustomer(customer);
 	}catch(Exception e){
 		model.addAttribute("duplicateUsername","Username already exists. Please enter different username");
-		/*model.addAttribute("registrationSuccess","Regisered Successfully...Please login with your Username and Password");*/
+		model.addAttribute("registrationSuccess","Regisered Successfully...Please login with your Username and Password");
 		System.out.println("Exception is " + e.getMessage());
 		return "registerCustomer";
 	}
-	return "Index";
+	return "login";
 }
 
 }

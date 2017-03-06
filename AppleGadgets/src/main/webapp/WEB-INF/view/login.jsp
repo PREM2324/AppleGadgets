@@ -1,6 +1,6 @@
                                     <!-- Header tab Command -->
 							
-		                          <%@ include file="Header2.jsp" %>	
+		                          <%@ include file="Header.jsp" %>	
 
 <html >
 <head>
@@ -122,15 +122,15 @@
 
                                     
 
-<%-- ENTER USERNAME AND PASSWORD <br>
-${error }
-${logout }
-${registrationSuccess } --%>
+ <!-- ENTER USERNAME AND PASSWORD <br> -->
+ 
 		                          
                                     
   <div class="wrapper">
   <form class="login" action="<c:url value="/j_spring_security_check"></c:url>" method="post">
-  
+  ${error }
+${logout }
+${registrationSuccess }
     <p class="title" style="color:#990099;margin-top:30px;font-family:Gill Sans MT;font-size:30px">GET LOGGEDIN</p>
     <input type="text" id="j_username" name="j_username" placeholder="Username" autofocus style="color:green"/>
     <i class="fa fa-user"></i>

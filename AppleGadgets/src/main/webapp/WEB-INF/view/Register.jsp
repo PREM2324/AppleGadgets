@@ -120,7 +120,7 @@
 
                                 <!-- Header tab Command -->
 							
-		                     <%@ include file="Header3.jsp" %>	
+		                     <%@ include file="Header.jsp" %>	
                                 
   <div class="wrapper">
   <form class="register">
