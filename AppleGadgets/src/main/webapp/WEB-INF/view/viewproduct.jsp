@@ -1,15 +1,43 @@
-<!-- Header Command -->
-<%@ include file="Header.jsp" %>  
+<%@ include file="Header.jsp"%>
 <html>
 <head>
-
-<title>Insert title here</title>
+<title>View Product</title>
 </head>
-<body style="margin-top:80px;">
-<div class="page-header">
-<b>Product Details</b>
-${product.name }
-</div>
+<body style="margin-top:90px" ng-app="app"  ng-controller="ProductController">
+	<div > 
+		<div class="page-header">
+			<b>PRODUCT DETAILS</b>
+		</div>
+		<table class="table">
+			<tr>
+				<td>Product Name :</td>
+				<td>${product.name }</td>
+			</tr>
+			<tr>
+				<td>Product Description</td>
+				<td>${product.description }</td>
+			</tr>
+			<tr>
+				<td>Product Price</td>
+				<td>${product.price }</td>
+			</tr>
+			<tr>
+				<td>Category details</td>
+				<td>${product.category.categoryDetails }</td>
+			</tr>
+			<tr>
+				<td>Manufacturing Date</td>
+				<td>${product.mfg }</td>
+			</tr>
+			<tr>
+			<td>
+			</td>
+			
+			<td><a href="" ng-click="addToCart(${product.id })"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+			</tr>
+		</table>
 
+	</div>
+	<script src="<c:url value="/resource/js/controller.js"></c:url>"></script>
 </body>
 </html>

@@ -10,6 +10,10 @@
 										
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		    <link rel="stylesheet" href="<c:url value='/resource/css/bootstrap.min.css'/>" />
+		    
+		                               <!-- Angular Js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+      
 </head>
 <body>
 						         <!-- Navigation Bar Command -->

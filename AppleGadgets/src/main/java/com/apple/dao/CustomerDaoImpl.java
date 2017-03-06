@@ -1,5 +1,6 @@
 package com.apple.dao;
 
+import org.hibernate.Query;
 /*import org.apache.log4j.Logger;*/
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.apple.model.Authorities;
 import com.apple.model.Cart;
 import com.apple.model.Customer;
+import com.apple.model.Users;
 @Repository
 public class CustomerDaoImpl implements CustomerDao{
 	
@@ -44,5 +46,21 @@ private SessionFactory sessionFactory;
 		session.flush();
 		session.close();		
 	}
+	
+	public Customer getCustomerByUsername(String username) {
+		Session session=sessionFactory.openSession();
+		Query query=session.createQuery("from Users where username=?");
+		query.setString(0, username);
+		Users users=(Users)query.uniqueResult();
+		//com.apple.model.Users 
+		Customer customer=users.getCustomer();
+		session.close();
+		return customer;
+		
+	}
 
 }
+
+
+
+
