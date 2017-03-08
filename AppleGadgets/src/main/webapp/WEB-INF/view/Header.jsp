@@ -50,6 +50,14 @@
     <ul class="nav navbar-nav navbar-right">
     
     <%-- <li><a href="">welcome ${pageContext.request.userPrincipal.name }</a></li> --%>
+    
+               <!-- Adding link for the CART -->
+    
+    
+    <security:authorize access="hasRole('ROLE_USER')">
+    <li><a href="<c:url value="/cart/getCartId"></c:url>" style="color:white"><span class="glyphicon glyphicon-cart"></span> CART</a></li>
+    </security:authorize> 
+    
     			
 			<c:if test="${pageContext.request.userPrincipal.name ==null }"> 
 			

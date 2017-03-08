@@ -1,5 +1,7 @@
 package com.apple.model;
 
+import java.io.Serializable;
+
 import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,8 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
-public class CartItem {
+public class CartItem implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
@@ -20,6 +24,7 @@ private double totalPrice;
 private Product product;
 
 @ManyToOne
+@JsonIgnore
 @JoinColumn(name="cart_id")
 private Cart cart;
 

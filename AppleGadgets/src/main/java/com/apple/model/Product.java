@@ -1,5 +1,6 @@
 package com.apple.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name="product")
-public class Product{
+public class Product implements Serializable{
 
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)

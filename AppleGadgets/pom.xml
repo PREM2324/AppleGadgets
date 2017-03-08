@@ -151,6 +151,24 @@
 </dependency> 
 
 
+<!-- for Data Conversion - JSON format -->
+<dependency>
+<groupId>com.fasterxml.jackson.core</groupId>
+<artifactId>jackson-core</artifactId>
+<version>2.5.1</version>
+</dependency>
+<dependency>
+<groupId>com.fasterxml.jackson.core</groupId>
+<artifactId>jackson-annotations</artifactId>
+<version>2.5.1</version>
+</dependency>
+<dependency>
+<groupId>com.fasterxml.jackson.core</groupId>
+<artifactId>jackson-databind</artifactId>
+<version>2.5.1</version>
+</dependency>
+
+
   </dependencies>
   <build>
     <finalName>AppleGadgets</finalName>

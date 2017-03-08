@@ -122,17 +122,51 @@
 							
 		                     <%@ include file="Header.jsp" %>	
                                 
-  <div class="wrapper">
+ <div class="wrapper">
   <form class="register">
     <p class="title" style="color:#ff3399;font-size:30px;font-family:Gill Sans MT;margin-top:30px">GET REGISTERED</p>
-    <input type="text" placeholder="Name" autofocus style="color:green"/>
+    <input type="text" placeholder="FirstName" autofocus style="color:green"/>
     <i class="fa fa-user"></i>
+    <input type="text" placeholder="LastName" autofocus style="color:green"/>
+    <i class="fa fa-user"></i>
+    
+    <input type="text" placeholder="MobileNo" style="color:green"/>
+    <i class="fa fa-phone"></i>
+    <input type="text" placeholder="EmailId" style="color:green"/>
+    <i class="fa fa-envelope"></i>
+    <input type="text" placeholder="UserName" style="color:green"/>
+    <i class="fa fa-user-secret"></i>
     <input type="password" placeholder="Password" style="color:green" />
     <i class="fa fa-key"></i>
-    <input type="password" placeholder="MobileNo" style="color:green"/>
-    <i class="fa fa-phone"></i>
-    <input type="password" placeholder="EmailId" style="color:green"/>
-    <i class="fa fa-envelope"></i>
+     <input type="text" placeholder="AppartmentNumber" style="color:green"/>
+    <i class="fa fa-home"></i>
+     <input type="text" placeholder="StreetName" style="color:green"/>
+    <i class="fa fa-street-view"></i>
+     <input type="text" placeholder="City" style="color:green"/>
+    <i class="fa fa-street-view"></i>
+     <input type="text" placeholder="State" style="color:green"/>
+   <i class="fa fa-address-book"></i>
+     <input type="text" placeholder="Country" style="color:green"/>
+    <i class="fa fa-flag"></i>
+    <input type="text" placeholder="ZipCode" style="color:green" />
+   <i class="fa fa-address-book"></i>
+    <input type="text" placeholder="AppartmentNumber" style="color:green"/>
+    <i class="fa fa-home"></i>
+     <input type="text" placeholder="StreetName" style="color:green"/>
+    <i class="fa fa-street-view"></i>
+     <input type="text" placeholder="City" style="color:green"/>
+    <i class="fa fa-address-card"></i>
+     <input type="text" placeholder="State" style="color:green"/>
+    <i class="fa fa-address-card"></i>
+     <input type="text" placeholder="Country" style="color:green"/>
+   <i class="fa fa-flag"></i>
+    <input type="password" placeholder="ZipCode" style="color:green" />
+   <i class="fa fa-address-card-o"></i>
+    
+    
+    
+    
+    
     
     
     
@@ -141,7 +175,7 @@
       <span class="state">REGISTER</span>
     </button>
   </form>
- </p>
+
 </div>                        	
                                     <!-- Footer tab Command -->
                                  <%@ include file="Footer.jsp" %>	
