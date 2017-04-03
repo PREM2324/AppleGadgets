@@ -18,7 +18,7 @@
 <body>
 						         <!-- Navigation Bar Command -->
 																	
-<nav class="navbar navbar-light navbar-fixed-top" style="background-color:#003366">
+<nav class="navbar navbar-light navbar-fixed-top" style="background-color:#0000ff">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="<c:url value="/Index"></c:url>" style="color:yellow;font-size:25px;font-family:Segoe Script">AppleGadgets</a>
@@ -35,10 +35,11 @@
      <c:if test="${pageContext.request.userPrincipal.name !=null }">
    <!-- http://localhost:8080/project1/admin/product/productform -->
    
-   <security:authorize access="hasRole('ROLE_ADMIN')">
-   <li><a href="${url }" style="color:white">ADD NEW PRODUCT</a></li>
-   <li><a href="<c:url value="/admin/product/productform"></c:url>" style="color:white">PRODUCTS</a></li>
+    <security:authorize access="hasRole('ROLE_ADMIN')">
+   <%-- <li><a href="${url }" style="color:white">ADD NEW PRODUCT</a></li> --%>
+   <li><a href="<c:url value="/admin/product/productform"></c:url>" style="color:white">ADD PRODUCTS</a></li>
    </security:authorize> 
+  
    <li><a href="<c:url value="/all/product/getAllProducts"></c:url>" style="color:white">BROWSE ALL PRODUCTS</a></li>
    
    
@@ -62,9 +63,9 @@
 			<c:if test="${pageContext.request.userPrincipal.name ==null }"> 
 			
 			
-      <li><a href="<c:url value="/Register"></c:url>" style="color:white"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li>
+     <%--  <li><a href="<c:url value="/Register"></c:url>" style="color:white"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li> --%>
       
-      <li> <a href="<c:url value="/everyone/registrationForm"></c:url>" style="color:white">REGISTER</a></li>
+      <li> <a href="<c:url value="/everyone/registrationForm"></c:url>" style="color:white"><span class="glyphicon glyphicon-user"></span>REGISTER</a></li>
       
       <li><a href="<c:url value="/login"></c:url>" style="color:white"><span class="glyphicon glyphicon-log-in"></span>LOGIN</a></li>
             

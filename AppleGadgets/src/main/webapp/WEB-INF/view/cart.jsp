@@ -8,10 +8,10 @@
 <div ng-app="app" ng-controller="ProductController">
 <div ng-init="getCart(${cartId})">
 <a href="" class="btn btn-danger pull-left" ng-click="clearCart()">
-<span class="glyphicon glphyicon-remove-sign"></span>
-ClearCart
-</a>
-<a href="" class="btn btn-success pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Checkout</a>
+<span class="glyphicon glphyicon-remove-sign"></span>ClearCart</a>
+
+<a href="<c:url value="/order/${cartId}"></c:url>" class="btn btn-success pull-right">
+<span class="glyphicon glyphicon-shopping-cart"></span>Check Out</a>
 <table class="table table-striped">
 <thead>
 <tr><th>NAME</th><th>QUANTITY</th><th>TOTAL PRICE</th><th>REMOVE</th>
@@ -24,7 +24,7 @@ ClearCart
 <td>{{cartItem.product.name}}</td>
 <td>{{cartItem.quantity}}</td>
 <td>{{cartItem.totalPrice}}</td>
-<td><a href="" class="btn btn-danger pull-left" ng-click="removeFromCart(cartItem.id)"><!-- <span class="glyphicon glyphicon-remove"> --></span>Remove
+<td><a href="" class="btn btn-danger pull-left" ng-click="removeFromCart(cartItem.id)"><span class="glyphicon glyphicon-remove"></span>
 </a></td>
 </tr>
 
@@ -32,6 +32,11 @@ ClearCart
 </table>
 Total Price:{{calculateGrandTotal()}}
 </div></div>
+
+
+			 <!-- Footer tab Command -->
+								 
+                                 <%@ include file="Footer.jsp" %>
 
 <script src="<c:url value="/resource/js/controller.js"></c:url>"></script>
 

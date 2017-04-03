@@ -28,6 +28,7 @@ private boolean enabled;
 
 @OneToOne(mappedBy="users")
 private Customer customer;
+
 public int getId() {
 	return id;
 }

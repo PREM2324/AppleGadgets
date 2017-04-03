@@ -131,8 +131,8 @@
   ${error }
 ${logout }
 ${registrationSuccess }
-    <p class="title" style="color:#990099;margin-top:30px;font-family:Gill Sans MT;font-size:30px">GET LOGGEDIN</p>
-    <input type="text" id="j_username" name="j_username" placeholder="Username" autofocus style="color:green"/>
+     <p class="title" style="color:#990099;margin-top:30px;font-family:Gill Sans MT;font-size:30px">LOGIN</p> 
+    <input type="text" id="j_username" name="j_username" placeholder="Username" autofocus style="color:green;margin-top:30px"/>
     <i class="fa fa-user"></i>
     <input type="password" id="j_password" name="j_password" placeholder="Password" style="color:green"/>
     <i class="fa fa-key"></i>

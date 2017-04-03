@@ -32,7 +32,7 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="<c:url value='/resource/images/IPHONE-6-APPLE-WATCH.jpg' />"  style="margin-top:30px;width:100%;height:auto;" />
+        <img src="<c:url value='/resource/images/iOS8-APPLE-a (1).jpg' />"  style="margin-top:30px;width:100%;height:auto;" />
         <div class="carousel-caption">
         </div>
       </div>
@@ -45,7 +45,7 @@
       </div>
     
       <div class="item">
-      <img src="<c:url value='/resource/images/iOS8-APPLE-a (1).jpg' />"  style="margin-top:30px;width:100%;height:auto;" />
+      <img src="<c:url value='/resource/images/IPHONE-6-APPLE-WATCH.jpg' />"  style="margin-top:30px;width:100%;height:auto;" />
       <div class="carousel-caption">
          
         </div>

@@ -13,7 +13,7 @@
 
 					            <!-- Footer tab Command -->
 
-	<nav class="navbar navbar-light navbar-fixed-bottom" style="background-color:#003366">
+	<nav class="navbar navbar-light navbar-fixed-bottom" style="background-color:#0000ff">
 		<div class="container-fluid">
 	<p style="font-size:15px;text-align:left;color:white;font-family:Candara"> Copyright © 2017 AppleGadgets Inc. All Right Reserved.</p>
 	<p style="font-size:15px;text-align:right;color:white;font-family:Candara"> EmailUs: siddam.premkumar2324@gmail.com</p>
