@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body ng-app="app">
+<div ng-controller="PersonController">
+
+<table>
+<tr ng-repeat="p in persons">
+<td>{{p.firstname}}</td> <td>{{p.lastname}}</td>
+<td><a href="" ng-click="deletePerson(p.id)">Delete</a></td>
+<td><a href="#editPerson/{{p.id}}" ng-click="">Edit</a></td>
+</tr>
+</table>
+ </div>
+</body>
+</html>
